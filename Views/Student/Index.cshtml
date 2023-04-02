@@ -1,0 +1,20 @@
+﻿
+@using _29._03hw.Models
+@{
+    ViewData["Title"] = "Index";
+
+    List<Student> students = ViewBag.Students;
+}
+
+<h1>Index</h1>
+
+<h3>Students:</h3>
+<ul>
+    @foreach (var std in students)
+    {
+            <li>
+                FullName: @std.FullName - Point: <span style="color:@(std.Point < 65 ? "red" : "green")">@std.Point</span>
+
+            </li>
+    }
+</ul>
